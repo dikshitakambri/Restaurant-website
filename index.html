@@ -66,8 +66,11 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm offset-sm-1 align-self-center">
                     <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-2 align-self-center">
+                    <button type="button" class="btn btn-warning" href="#Reservation">Reserve a table</button>
                 </div>
             </div>
         </div>
@@ -98,12 +101,22 @@
 
 
         <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+            <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class="col col-sm order-sm-first col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            <div class="col col-sm col-md">
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="mt-0">Weekend Grand Buffet
+                            <span class="badge badge-danger">NEW</span>
+                        </h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads,
+                            six enticing appetizers, six main entrees and five choicest desserts.
+                            Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                    <img class="d-flex mr-3 img-thumbnail align-self-center"
+                            src="img/buffet.png" alt="Buffet">
+                </div>
             </div>
         </div>
 
@@ -125,6 +138,49 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center" id="Reservation">
+            <div class="col-12 col-sm-8 offset-sm-2">
+                <card>
+                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-4">Number of Guests</dt>
+                            <dd class="col-8">
+                                <input type="radio" id="1" name="number" value="1">
+                                <label for="1">1</label>
+                                <input type="radio" id="2" name="number" value="2">
+                                <label for="2">2</label>
+                                <input type="radio" id="3" name="number" value="3">
+                                <label for="3">3</label>
+                                <input type="radio" id="4" name="number" value="4">
+                                <label for="4">4</label>
+                                <input type="radio" id="5" name="number" value="5">
+                                <label for="5">5</label>
+                                <input type="radio" id="6" name="number" value="6">
+                                <label for="6">6</label>
+                            </dd>
+                            <br>
+                            <dt class="col-4">Date and Time</dt>
+                            <div class="row col-8">
+                                <div class="col-6 col-sm-4">
+                                    <input type="number" class="form-control" id="date" name="date" placeholder="Date">
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <input type="number" class="form-control" id="time" name="time" placeholder="Time">
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <dt class="col-4"></dt>
+                            <dd class=" col-6 col-sm-8">
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </dd>
+                        </dl>
+                    </div>
+                </card>
             </div>
         </div>
     </div>
