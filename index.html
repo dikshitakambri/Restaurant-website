@@ -125,9 +125,9 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-2 align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" href="#Reservation"
-                    data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+91 8554067489</strong>"
-                    data-placement="bottom">Reserve a table
+                    <a role="button" class="btn btn-block nav-link btn-warning" data-target="#ReservationModal"
+                        data-toggle="modal">
+                        Reserve a table
                     </a>
                 </div>
             </div>
@@ -256,46 +256,60 @@
             </div>
         </div>
 
-        <div class="row row-content align-items-center" id="Reservation">
-            <div class="col-12 col-sm-8 offset-sm-2">
-                <card>
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <dl class="row">
-                            <dt class="col-4">Number of Guests</dt>
-                            <dd class="col-8">
-                                <input type="radio" id="1" name="number" value="1">
-                                <label for="1">1</label>
-                                <input type="radio" id="2" name="number" value="2">
-                                <label for="2">2</label>
-                                <input type="radio" id="3" name="number" value="3">
-                                <label for="3">3</label>
-                                <input type="radio" id="4" name="number" value="4">
-                                <label for="4">4</label>
-                                <input type="radio" id="5" name="number" value="5">
-                                <label for="5">5</label>
-                                <input type="radio" id="6" name="number" value="6">
-                                <label for="6">6</label>
-                            </dd>
-                            <br>
-                            <dt class="col-4">Date and Time</dt>
-                            <div class="row col-8">
-                                <div class="col-6 col-sm-4">
-                                    <input type="number" class="form-control" id="date" name="date" placeholder="Date">
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <input type="number" class="form-control" id="time" name="time" placeholder="Time">
-                                </div>
+        <div id="ReservationModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><strong>Reserve a Table</strong></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <label class="col-sm-auto col-4"><strong>Number of Guests</strong></label>
+                                <dd class="col-auto offset-sm-1">
+                                    <input type="radio" id="1" name="number" value="1">
+                                    <label for="1"><strong>1</strong></label>
+                                    <input type="radio" id="2" name="number" value="2">
+                                    <label for="2"><strong>2</strong></label>
+                                    <input type="radio" id="3" name="number" value="3">
+                                    <label for="3"><strong>3</strong></label>
+                                    <input type="radio" id="4" name="number" value="4">
+                                    <label for="4"><strong>4</strong></label>                                        <input type="radio" id="5" name="number" value="5">
+                                    <label for="5"><strong>5</strong></label>
+                                    <input type="radio" id="6" name="number" value="6">
+                                    <label for="6"><strong>6</strong></label>
+                                </dd>
+                            </div>
+                            <div class="form-row">
+                                <label class="col-4 col-sm-auto"><strong>Section</strong></label>
+                                <button type="radio" class="btn btn-success offset-sm-2">No-smoking</button>
+                                <button type="radio" class="btn btn-danger">Smoking</button>
                             </div>
                             <br>
+                            <div class="form-row">
+                                <label class="col-4 col-sm-auto"><strong>Date and Time</strong></label>
+                                <div class="row col-8">
+                                    <div class="col-6 col-sm-4 offset-sm-2">
+                                        <input type="number" class="form-control" id="date" name="date" placeholder="Date">
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <input type="number" class="form-control" id="time" name="time" placeholder="Time">
+                                    </div>
+                               </div>
+                            </div>
                             <br>
-                            <dt class="col-4"></dt>
-                            <dd class=" col-6 col-sm-8">
-                                <button type="submit" class="btn btn-primary">Reserve</button>
-                            </dd>
-                        </dl>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary offset-3 btn-sm" data-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    Reserve
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                </card>
+                </div>
             </div>
         </div>
     </div>
@@ -348,10 +362,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 </html>
