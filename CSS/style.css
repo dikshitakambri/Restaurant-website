@@ -43,6 +43,7 @@ body{
 }
 .carousel {
     background: #512DA8;
+    border-radius: 8px;
 }
 .carousel-item {
     height: 300px;
