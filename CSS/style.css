@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body{
     padding:50px 0px 0px 0px;
     z-index:0;
@@ -65,7 +67,79 @@ body{
 }
 .modal-header {
     background: #512DA8;
+    width: 100%;
 }
 .modal-body {
     background: #EBDEF0; 
+    width: 100%;
+    padding: 25px 38px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+}
+/*start*/
+.content {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+input{
+    color:#022255 !important;
+}
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=text]:focus{
+    box-shadow: 0 0 5px #512DA8;
+    border: 1px solid #512DA8;
+}
+.control-label {
+    text-align: left !important;
+    padding-bottom: 4px;
+}
+.progress {
+    height: 3px !important;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.show-pass{
+    position: absolute;
+    top:5%;
+    right: 8%;
+}
+.progress-bar-danger {
+    background-color: #e90f10;
+}
+.progress-bar-warning{
+    background-color: #ffad00;
+}
+.progress-bar-success{
+    background-color: #02b502;
+}
+.login-btn{
+    width: 180px !important;
+    background-image: linear-gradient(to right,#512DA8 ,#512DA8) !important;
+    font-size: 18px;
+    margin: 0 auto 5px;
+    padding: 8px 0; 
+}
+.login-btn:hover{
+    background-image: linear-gradient(to right, #512DA8 , #512DA8)!important;
+    color: #fff !important;
+}
+.fa-eye{
+    color: #022255;
+    cursor: pointer;
+}
+.ex-account p a{
+    color: #512DA8;
+    text-decoration: underline;
+}
+.fa-circle{
+    font-size: 6px;  
+}
+.fa-check{
+    color: #02b502;
 }
