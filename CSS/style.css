@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body{
     padding:50px 0px 0px 0px;
@@ -76,7 +75,6 @@ body{
     border-radius: 12px;
     box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
 }
-/*start*/
 .content {
     height: 500px;
     display: flex;
