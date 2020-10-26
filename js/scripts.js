@@ -104,3 +104,6 @@ function addmore(){
     var more = prompt("Enter number of Guests");
     
 }
+function ty(){
+    var TY = alert("Thank you for Reservation!");
+}
