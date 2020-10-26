@@ -100,3 +100,7 @@ function checkStrength(password) {
         passwordStrength.style = 'width: 100%';
     }
 }
+function addmore(){
+    var more = prompt("Enter number of Guests");
+    
+}
