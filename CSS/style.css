@@ -1,79 +1,25 @@
-
 body{
     padding:50px 0px 0px 0px;
     z-index:0;
+	scroll-behavior: smooth;
+	font-size: 100%;
+	font-family: 'Poppins', sans-serif;
+	background: #fff;
 }
-.row-header{
-    margin:0px auto;
-    padding:0px;
+.navbar-dark {
+    background-color: #512DA8;
 }
-
-.row-content {
-    margin:0px auto;
-    padding: 50px 0px 50px 0px;
-    border-bottom: 1px ridge;
-    min-height:400px;
+.navbar-nav {
+    transition: 0.5s ease-in-out;
 }
-
+.nav-link:hover, .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
 .footer{
     background-color: #D1C4E9;
     margin:0px auto;
     padding: 20px 0px 20px 0px;
-}
-
-.address{
-    font-size:80%;
-    margin:0px;
-    color:#0f0f0f;
-}
-
-.jumbotron{
-    padding:70px 30px 70px 30px;
-    margin:0px auto;
-    color:floralwhite;
-}
-
-.navbar-dark {
-     background-color: #512DA8;
-}
-
-.tab-content {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-}
-.carousel {
-    background: #512DA8;
-    border-radius: 8px;
-}
-.carousel-item {
-    height: 300px;
-}
-.carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 300px;
-}
-#carouselButton {
-    right: 0px;
-    bottom: 0px;
-    position: absolute;
-    z-index: 1;
-}
-.modal-title {
-    color: floralwhite;
-}
-.modal-header {
-    background: #512DA8;
-    width: 100%;
-}
-.modal-body {
-    background: #EBDEF0; 
-    width: 100%;
-    padding: 25px 38px;
-    border-radius: 12px;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
 }
 .content {
     height: 500px;
@@ -81,7 +27,20 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-
+}
+.modal-header {
+    background: #512DA8;
+    width: 100%;
+}
+.modal-title {
+    color: floralwhite;
+}
+.modal-body {
+    background: #EBDEF0; 
+    width: 100%;
+    padding: 25px 25px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
 }
 input{
     color:#022255 !important;
@@ -140,4 +99,45 @@ input[type=text]:focus{
 }
 .fa-check{
     color: #02b502;
+}
+
+.jumbotron{
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    color:floralwhite;
+}
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+.carousel {
+    background: #512DA8;
+    border-radius: 8px;
+}
+.carousel-item {
+    height: 300px;
+}
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+#carouselButton {
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 1;
+}
+@media screen and (max-width: 360px){
+    font-size: 80%;
+}
+@media screen and (max-width: 290px){
+    font-size: 50%;
 }

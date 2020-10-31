@@ -102,6 +102,7 @@ function checkStrength(password) {
 }
 function addmore(){
     var more = prompt("Enter number of Guests");
+    document.getElementById('6').innerHTML= input(more);
     
 }
 function ty(){
