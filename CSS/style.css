@@ -57,7 +57,11 @@ input[type=checkbox]:focus{
     box-shadow: 0 0 5px #512DA8;
     border: 1px solid #512DA8;
 }
-#feedback {
+#feedback:focus {
+    box-shadow: 0 0 5px #512DA8;
+    border: 1px solid #512DA8;
+}
+#con2:focus {
     box-shadow: 0 0 5px #512DA8;
     border: 1px solid #512DA8;
 }
@@ -150,4 +154,7 @@ input[type=checkbox]:focus{
 }
 @media screen and (max-width: 290px){
     font-size: 50%;
+}
+#con {
+    display: none;
 }

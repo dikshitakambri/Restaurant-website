@@ -108,3 +108,13 @@ function addmore(){
 function ty(){
     var TY = alert("Thank you for Reservation!");
 }
+function contactfunction(){
+    if(document.getElementById('approve').checked){
+        document.getElementById('con').style.display='inline';
+        document.getElementById('con2').setAttribute('required',true);
+    }
+    else{
+        document.getElementById('con2').removeAttribute('required');
+        document.getElementById('con').style.display='none';
+    }
+}

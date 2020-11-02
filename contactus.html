@@ -151,14 +151,15 @@
                     <div class="form-group row">
                         <div class="col-md-6 offset-md-2">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="approve" id="approve" value="">
+                                <input type="checkbox" class="form-check-input" name="approve" id="approve" value=""
+                                 onchange="contactfunction()">
                                 <label class="form-check-label" for="approve">
                                     <strong>May we contact you?</strong>
                                 </label>
                             </div>
                         </div>
-                        <div class="col-md-3 offset-md-1">
-                            <select class="form-control" id="feedback">
+                        <div class="col-md-3 offset-md-1" id="con">
+                            <select class="form-control" id="con2">
                                 <option>Tel.</option>
                                 <option>Email</option>
                             </select>
