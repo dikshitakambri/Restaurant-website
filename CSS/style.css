@@ -47,7 +47,17 @@ input{
 }
 input[type=email]:focus,
 input[type=password]:focus,
-input[type=text]:focus{
+input[type=text]:focus,
+input[type=radio]:focus,
+input[type=date]:focus,
+input[type=time]:focus,
+input[type=button]:focus,
+input[type=tel]:focus,
+input[type=checkbox]:focus{
+    box-shadow: 0 0 5px #512DA8;
+    border: 1px solid #512DA8;
+}
+#feedback {
     box-shadow: 0 0 5px #512DA8;
     border: 1px solid #512DA8;
 }
