@@ -101,8 +101,8 @@ function checkStrength(password) {
     }
 }
 function addmore(){
-    var more = prompt("Enter number of Guests");
-    document.getElementById('6').innerHTML= lab;
+    var more = prompt("Enter number of Guests")
+    document.getElementById('lab').innerHTML= more;
     
 }
 function ty(){
