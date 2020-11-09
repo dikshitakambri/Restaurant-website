@@ -118,3 +118,9 @@ function contactfunction(){
         document.getElementById('con').style.display='none';
     }
 }
+function leave(){
+    var leave = alert('Do you really wanr to leave');
+    if (leave==true){
+        alert('Thanks for visiting')
+    }
+}
