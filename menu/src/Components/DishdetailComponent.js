@@ -12,7 +12,7 @@ class DishDetail extends Component{
             <Card>
                 <CardImg top src={dish.image} alt={dish.name} />
                 <CardBody>
-                    <CardTitle>{dish.name}</CardTitle>
+                    <CardTitle><b>{dish.name}</b></CardTitle>
                     <CardText>{dish.description}</CardText>
                 </CardBody>
             </Card>
@@ -23,7 +23,7 @@ class DishDetail extends Component{
         const commentsList = comments.map((comment)=>{return(
                 <ListGroupItem  key={comment.id} >
                     <p>{comment.comment}</p>
-                    <p>{comment.author}, {comment.date}</p>
+                    <p>{comment.author}, {new Intl.DateTimeFormat('en-US', {year:'numeric',month:'short',day:'2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
                 </ListGroupItem>
         );});
         return(commentsList);
