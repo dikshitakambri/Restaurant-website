@@ -89,6 +89,156 @@
             <hr>
          </div>
     </div>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <div class="card card-blog">
+                    <div class="card-img">
+                        <img src="img/baked-chilli-jacket-potatoes.webp" alt="baked-chilli-jacket-potatoes" width="80%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Baked chilli jacket potatoes</a></h3>
+                        <p class="card-description">
+                            Perfect your spud technique then pile our filling ideas high.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card card-blog">
+                    <div class="card-img">
+                        <img src="img/mexican-chicken-burger_1-b5cca6f.webp" alt="Mexican-chicken-burger" width="80%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Mexican chicken burger</a></h3>
+                        <p class="card-description">
+                            Discover our best burger recipes, with everything you'll ever need to put inside a bun,
+                            from juicy beef patties, to miso, chicken, turkey and veggie burgers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card card-blog">
+                    <div class="card-img">
+                        <img src="img/stuffed-pasta-bake-bolognese-2a0e5e3.webp" alt="Stuffed-pasta-bake-bolognese" width="80%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Stuffed pasta bake bolognese</a></h3>
+                        <p class="card-description">
+                            Serve up a hearty pasta bake topped with melted cheese.
+                            These comforting dishes include lasagne, mac 'n' cheese and sausage pasta bake.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br class="col-md">
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <div class="card card-blog">
+                    <div class="card-img">
+                        <img src="img/uthappizza.png" alt="Uthappizza" width="80%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Uthappizza</a></h3>
+                        <p class="card-description">
+                            A unique combination of Indian Uthappam (pancake) and
+                            Italian pizza, topped with Cerignola olives, ripe vine
+                            cherry tomatoes, Vidalia onion, Guntur chillies and
+                            Buffalo Paneer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card card-blog">
+                    <div class="card-img">
+                        <img src="img/elaicheesecake.png" alt="Elaicheesecake" width="80%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Elaicheesecake</a></h3>
+                        <p class="card-description">
+                            Featuring mouthwatering combinations with a choice of five different salads,
+                            six enticing appetizers, six main entrees and five choicest desserts.
+                            Free flowing bubbly and soft drinks. All for just $19.99 per person
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card card-blog">
+                    <div class="card-img">
+                        <img src="img/buffet.png" alt="Buffet" width="80%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Buffet</a></h3>
+                        <p class="card-description">
+                            Featuring mouthwatering combinations with a choice of five different salads,
+                            six enticing appetizers, six main entrees and five choicest desserts.
+                            Free flowing bubbly and soft drinks. All for just $19.99 per person
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br class="col-md">
+        <span id="dots"></span><span id="more">
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <div class="card card-blog">
+                    <div class="card-img">
+                        <img src="img/vadonut.png" alt="Buffet" width="80%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Buffet</a></h3>
+                        <p class="card-description">
+                            Featuring mouthwatering combinations with a choice of five different salads,
+                            six enticing appetizers, six main entrees and five choicest desserts.
+                            Free flowing bubbly and soft drinks. All for just $19.99 per person
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card card-blog">
+                    <div class="card-img">
+                        <img src="img/zucchipakoda.png" alt="Buffet" width="80%">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Buffet</a></h3>
+                        <p class="card-description">
+                            Featuring mouthwatering combinations with a choice of five different salads,
+                            six enticing appetizers, six main entrees and five choicest desserts.
+                            Free flowing bubbly and soft drinks. All for just $19.99 per person
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div></span>
+        <button type="button" class="btn .btn-lg view-btn text-center" id="read" onclick="read()"><b>View More</b></button>
+	    	<script type="text/javascript">
+	    		var i=0;
+	    		function read() {
+	    			if(!i){
+	    				document.getElementById("more").style.display="inline";
+	    				document.getElementById("dots").style.display="none";
+	    				document.getElementById("read").innerHTML="View less";
+	    				i=1;
+	    			}
+	    			else{
+	    				document.getElementById("more").style.display="none";
+	    				document.getElementById("dots").style.display="inline";
+	    				document.getElementById("read").innerHTML="View More";
+	    				i=0;
+	    			}
+	    		}
+	    	</script>
+    </div>
+    <br>
+    <br>
 
 <footer class="footer">
     <div class="container">
