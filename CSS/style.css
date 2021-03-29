@@ -12,7 +12,7 @@ a {
     transition: all 0.5s ease-in-out;
 }
 a:hover {
-    color:#000080;
+    color:#512DA8;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
 }
@@ -29,12 +29,26 @@ a:hover {
     border: black 2px;
     color: #fff !important;
 }
+
+.box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2sec;
+}
+
+.title {
+  text-align: center;
+}
 /* =================== Navbar =================== */
 .navbar-b {
     transition: all .5s ease-in-out;
     background-color: #512DA8;
     padding-top: 1.563rem;
     padding-bottom: 1.563rem;
+    height: 80px;
   }
   
   .navbar-b.navbar-reduce {
@@ -105,32 +119,32 @@ a:hover {
   
   .navbar-b.navbar-reduce {
   transition: all .5s ease-in-out;
-  background-color: #fff;
+  background-color: #512DA8;
   padding-top: 15px;
   padding-bottom: 15px;
   }
   
   .navbar-b.navbar-reduce .nav-link {
-    color:#120078;
+    color:#512DA8;
   }
   
   .navbar-b.navbar-reduce .nav-link:before {
-    background-color:#120078;
+    background-color:#512DA8;
   }
   
   .navbar-b.navbar-reduce .nav-link:hover {
-      color:#120078;
+      color:#512DA8;
   }
   
   .navbar-b.navbar-reduce .show > .nav-link,
   .navbar-b.navbar-reduce .active > .nav-link,
   .navbar-b.navbar-reduce .nav-link.show,
   .navbar-b.navbar-reduce .nav-link.active {
-    color:#120078;
+    color:#512DA8;
   }
   
   .navbar-b.navbar-reduce .navbar-brand {
-    color: #120078;
+    color: #512DA8;
   }
   
   .navbar-b.navbar-reduce .navbar-toggler span {
@@ -161,13 +175,13 @@ a:hover {
   }
   
   .navbar-b .dropdown-menu .dropdown-item:hover {
-      background-color: #120078;
+      background-color: #512DA8;
       color: #fff;
       transition: all 500ms ease;
     }
     
   .navbar-b .dropdown-menu .dropdown-item.active {
-      background-color: #120078;
+      background-color: #512DA8;
   }
   
   /*--/ Hamburger Navbar */
@@ -252,6 +266,13 @@ a:hover {
 
 /* ================= Cards ============================*/
 
+.bg {
+  background-color: #512DA8;
+}
+.card-content {
+  height: 500px;
+}
+
 .card-blog .card-body {
     position: relative;
   }
@@ -285,9 +306,14 @@ a:hover {
 }
 
 .card-blog {
-    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
+
+.card-blog:hover{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 /* ======================================================  */
+
 #more{
 	display: none;
 }
@@ -318,7 +344,7 @@ a:hover {
     box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
 }
 input{
-    color:#022255 !important;
+    color:#512DA8 !important;
 }
 input[type=email]:focus,
 input[type=password]:focus,
@@ -366,7 +392,7 @@ input[type=checkbox]:focus{
 }
 
 .fa-eye{
-    color: #022255;
+    color: #512DA8;
     cursor: pointer;
 }
 .ex-account p a{
@@ -416,9 +442,17 @@ input[type=checkbox]:focus{
 }
 @media screen and (max-width: 360px){
     font-size: 80%;
+
+    .card-content{
+      min-height: 450px;
+    }
 }
 @media screen and (max-width: 290px){
     font-size: 50%;
+
+    /* .card-content{
+      min-height: 200px;
+    } */
 }
 #con {
     display: none;

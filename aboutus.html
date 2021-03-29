@@ -18,13 +18,11 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-     <!-- CSS -->
-     <link rel="stylesheet" href="CSS/style.css">
-
      <!-- Bootstrap -->
      <!-- CSS only -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
- 
+     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
      <!--Bootstrap Social-->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
      <!-- Google Fonts -->
@@ -33,13 +31,17 @@
  
      <!-- FontAwesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"> 
+
     
     <link href="node_modules/animate/animate.min.css" rel="stylesheet">
     <link href="node_modules/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="node_modules/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="node_modules/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"> 
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
 
      <link rel="shortcut icon" href="images/favicon.png">
      <link rel="icon" href="images/favicon.png">
@@ -57,7 +59,7 @@
                 <span></span>
                 <span></span>
             </button>
-            <a class="navbar-brand" href="#"><a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="40"></a></a>
+            <a class="navbar-brand" href="#"><a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="45"></a></a>
              <!--Collapse-->
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
@@ -104,8 +106,8 @@
             </div>
             <div class="col-12 col-sm-6 offset-md-1">
                 <!--Card-->
-                <div class="card">
-                    <h3 class="card-header bg-primary text-white">Facts At a Glance</h3>
+                <div class="card box">
+                    <h3 class="card-header bg text-white">Facts At a Glance</h3>
                     <div class="card-body">
                         <dl class="row">
                             <dt class="col-6">Started</dt>
@@ -122,7 +124,7 @@
             </div>
 
             <div class="col-12">
-                <div class="card card-body bg-light">
+                <div class="card box card-body bg-light">
                     <blockquote class="blockquote">
                         <p class="mb-0">You better cut the pizza in four pieces because
                             I'm not hungry enough to eat six.</p>
@@ -138,10 +140,10 @@
 
         <div class="row row-content">
             <div class="col-12">
-                <h2>Corporate Leadership</h2>
+                <h2 class="title">Corporate Leadership</h2>
                 <br>
                 <!--Accordion-->
-                <div id="accordion">
+                <div id="accordion" class="box">
                     <div class="card">
                         <div class="card-header" role="tab" id="peterhead">
                             <h3 class="mb-0">
@@ -219,11 +221,12 @@
                 
 
         <div class="row row-content">
-            <div class="col-12 col-sm-9 offset-sm-2 ">
-                <h2>Facts &amp; Figures</h2>
+            <div class="col-12">
+                <h2 class="title">Facts &amp; Figures</h2>
+                <br>
             </div>
-            <div class="col-12 col-sm-6">
-                <div class="table-responsive">
+            <div class="col-12 col-sm-8 offset-sm-2">
+                <div class="table-responsive box">
                     <table class="table table-striped">
                         <thead class="thead-dark">
                             <tr>

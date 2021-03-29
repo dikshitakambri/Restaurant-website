@@ -18,9 +18,6 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="CSS/style.css">
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -40,6 +37,9 @@
     <link href="node_modules/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="node_modules/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="node_modules/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
     
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="icon" href="images/favicon.png">
@@ -53,19 +53,20 @@
 <body onunload='leave()'>
     <nav class="navbar navbar-b navbar-trans navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar"  
+            aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation" >
+                <span></span>
                 <span></span>
                 <span></span>
             </button>
             <a class="navbar-brand" href="#"><a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="40"></a></a>
              <!--Collapse-->
-            <div class="collapse navbar-collapse" id="Navbar">
+            <div class="collapse navbar-collapse justify-content-center" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                    <li class="nav-item"><a class="nav-link " href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./menu.html"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll" href="./menu.html"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
                     <a data-toggle="modal" data-target="#loginModal">
@@ -79,7 +80,7 @@
     </nav>
 
     <!--LoginModal-->
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="loginModal" class="modal fade box" role="dialog">
         <div class="modal-dialog modal-md" role="content">
             <div class="modal-content content">
                 <div class="modal-header">
@@ -187,9 +188,9 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-target="#ReservationModal"
+                    <a role="button" class="btn btn-block nav-link btn-warning box" data-target="#ReservationModal"
                         data-toggle="modal">
-                        Reserve a table
+                        <b>Reserve a table</b>
                     </a>
                 </div>
             </div>
@@ -257,7 +258,7 @@
     <div class="container">
         <div class="row row-content">
             <div class="col">
-                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                <div id="mycarousel" class="carousel slide box" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
