@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var aboutrouter = require('./routes/about');
 var menuRouter = require('./routes/menu');
 var contactRouter = require('./routes/contact');
+var signinRouter = require('./routes/sign-in');
 
 var app = express();
 
@@ -24,6 +25,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Home route
 
 app.use('/', indexRouter);
+
+// Sign-in Route
+
+app.use('/signin',signinRouter);
 
 // About Route
 
