@@ -3,12 +3,12 @@ const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
 const mongoose = require("mongoose");
 
-var signinRouter = express.Router();
+var signupRouter = express.Router();
 
 const Customer = require('../model/customer');
 
 /* GET Sign-up page. */
-signinRouter.route("/")
+signupRouter.route("/")
 .get((req, res) => {
   res.render('sign-up');
 })
@@ -37,4 +37,4 @@ signinRouter.route("/")
 });
 
 
-module.exports = signinRouter;
+module.exports = signupRouter;

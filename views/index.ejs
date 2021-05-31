@@ -20,7 +20,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll" href="/contact"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a href="/login">
                         <span class="fa fa-sign-in">
                             Login
                         </span>
@@ -29,105 +29,6 @@
             </div>
         </div>
     </nav>
-
-    <!--LoginModal-->
-    <div id="loginModal" class="modal fade box" role="dialog">
-        <div class="modal-dialog modal-md" role="content">
-            <div class="modal-content content">
-                <div class="modal-header">
-                    <h4 class="modal-title justify-content-center">Login</h4>
-                    <button type="button" class="close" style="color: floralwhite;" data-dismiss="modal"
-                    >&times;</button>
-                </div>
-                <div class="modal-body" id="validateForm">
-                    <form action="/" method="POST">
-                    <fieldset>
-                        <!-- Email input-->
-                        <div class="form-group">
-                            <label class="col-md-12 control-label" for="textinput">
-                                Email
-                            </label>
-                            <div class="col-md-12">
-                                <input id="email" name="textinput" 
-                                type="email" name="email" autocomplete="off" 
-                                placeholder="Enter your email address" 
-                                class="form-control input-md" required>
-                            </div>
-                        </div>
-
-                        <!-- Password -->
-                        <div class="form-group">
-                            <label class="col-md-12 control-label" for="passwordinput">
-                                Password
-                            </label>
-                            <div class="col-md-12">
-                                <input id="password" class="form-control input-md"
-                                name="password" type="password" 
-                                placeholder="Enter your password" required>
-                                <span class="show-pass" onclick="toggle()">
-                                    <i class="fa fa-eye" onclick="myFunction(this)"></i>
-                                </span>
-                                <div id="popover-password">
-                                    <p><span id="result"></span></p>
-                                    <div class="progress">
-                                        <div id="password-strength" 
-                                            class="progress-bar" 
-                                            role="progressbar" 
-                                            aria-valuenow="40" 
-                                            aria-valuemin="0" 
-                                            aria-valuemax="100" 
-                                            style="width:0%">
-                                        </div>
-                                    </div>
-                                    <ul class="list-unstyled">
-                                        <li class="">
-                                            <span class="low-upper-case">
-                                                <i class="fa fa-circle" aria-hidden="true"></i>
-                                                &nbsp;Lowercase &amp; Uppercase
-                                            </span>
-                                        </li>
-                                        <li class="">
-                                            <span class="one-number">
-                                                <i class="fa fa-circle" aria-hidden="true"></i>
-                                                &nbsp;Number (0-9)
-                                            </span> 
-                                        </li>
-                                        <li class="">
-                                            <span class="one-special-char">
-                                                <i class="fa fa-circle" aria-hidden="true"></i>
-                                                &nbsp;Special Character (!@#$%^&*)
-                                            </span>
-                                        </li>
-                                        <li class="">
-                                            <span class="eight-character">
-                                                <i class="fa fa-circle" aria-hidden="true"></i>
-                                                &nbsp;Atleast 8 Character
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Button-->
-
-                        <div class="form-group">
-                            <button type="submit" class="btn login-btn btn-block all-btn" style="color: white;">
-                                Sign In
-                            </button>    
-                        </div>
-                        <div class="ex-account text-center">
-                            <p>Don't have Account? SignUp 
-                                <a href="/signin">here</a>
-                            </p>
-                            <div class="divider"></div>
-                        </div>
-                    </fieldset>
-                </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <header class="jumbotron" style="background-color:#9575CD;">
         <div class="container">
@@ -157,22 +58,22 @@
                     <h4 class="modal-title"><strong>Reserve a Table</strong></h4>
                     <button type="button" class="close" style="color: floralwhite;" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <div class="modal-body">yhgf
+                    <form method="POST" action="/">
                         <div class="form-row">
                             <label class="col-sm-3 col-12"><strong>Number of Guests</strong></label>
                             <dd class="col-auto">
-                                <input type="radio" id="1" name="number" value="1">
+                                <input type="radio" id="1" name="number1" value="1">
                                 <label for="1"><strong>1</strong></label>
-                                <input type="radio" id="2" name="number" value="2">
+                                <input type="radio" id="2" name="number2" value="2">
                                 <label for="2"><strong>2</strong></label>
-                                <input type="radio" id="3" name="number" value="3">
+                                <input type="radio" id="3" name="number3" value="3">
                                 <label for="3"><strong>3</strong></label>
-                                <input type="radio" id="4" name="number" value="4">
+                                <input type="radio" id="4" name="number4" value="4">
                                 <label for="4"><strong>4</strong></label>
-                                <input type="radio" id="5" name="number" value="5">
+                                <input type="radio" id="5" name="number5" value="5">
                                 <label for="5"><strong>5</strong></label>
-                                <input type="radio" id="6" name="number" value="More" onclick="addmore()">
+                                <input type="radio" id="6" name="numbermore" value="More" onclick="addmore()">
                                 <label for="6"><strong id="lab">More</strong></label>
                             </dd>
                         </div>

@@ -12,24 +12,9 @@ indexrouter.route("/")
 .get((req, res) => {
   res.render('index');
 })
-.post((req, res) =>{
-  const email = req.body.email;
-  const password = req.body.password
-
-  Customer.findOne({email: email}, (err, foundCustomer) =>{
-    if(err){
-      console.log(err);
-    }
-    else{
-      if(foundCustomer){
-        if(foundCustomer.password === password){
-          console.log(foundCustomer);
-          console.log("Signed in successfully");
-          res.redirect("/about");
-        }
-      }
-    }
-  })
-});
+.post((req, res) => {
+  const 
+})
+;
 
 module.exports = indexrouter;
