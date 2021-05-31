@@ -40,6 +40,7 @@
                     >&times;</button>
                 </div>
                 <div class="modal-body" id="validateForm">
+                    <form action="/" method="POST">
                     <fieldset>
                         <!-- Email input-->
                         <div class="form-group">
@@ -48,7 +49,7 @@
                             </label>
                             <div class="col-md-12">
                                 <input id="email" name="textinput" 
-                                type="email" autocomplete="off" 
+                                type="email" name="email" autocomplete="off" 
                                 placeholder="Enter your email address" 
                                 class="form-control input-md" required>
                             </div>
@@ -111,9 +112,9 @@
                         <!-- Button-->
 
                         <div class="form-group">
-                            <a href="/" class="btn login-btn btn-block all-btn" style="color: white;">
-                                Create Account
-                            </a>    
+                            <button type="submit" class="btn login-btn btn-block all-btn" style="color: white;">
+                                Sign In
+                            </button>    
                         </div>
                         <div class="ex-account text-center">
                             <p>Don't have Account? SignUp 
@@ -122,6 +123,7 @@
                             <div class="divider"></div>
                         </div>
                     </fieldset>
+                </form>
                 </div>
             </div>
         </div>

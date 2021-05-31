@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+const bodyParser = require("body-parser");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -8,7 +9,7 @@ var indexRouter = require('./routes/index');
 var aboutrouter = require('./routes/about');
 var menuRouter = require('./routes/menu');
 var contactRouter = require('./routes/contact');
-var signinRouter = require('./routes/sign-in');
+var signinRouter = require('./routes/sign-up');
 
 var app = express();
 
