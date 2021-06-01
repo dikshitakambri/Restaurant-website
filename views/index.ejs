@@ -58,29 +58,21 @@
                     <h4 class="modal-title"><strong>Reserve a Table</strong></h4>
                     <button type="button" class="close" style="color: floralwhite;" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body">yhgf
+                <div class="modal-body">
                     <form method="POST" action="/">
                         <div class="form-row">
                             <label class="col-sm-3 col-12"><strong>Number of Guests</strong></label>
-                            <dd class="col-auto">
-                                <input type="radio" id="1" name="number1" value="1">
-                                <label for="1"><strong>1</strong></label>
-                                <input type="radio" id="2" name="number2" value="2">
-                                <label for="2"><strong>2</strong></label>
-                                <input type="radio" id="3" name="number3" value="3">
-                                <label for="3"><strong>3</strong></label>
-                                <input type="radio" id="4" name="number4" value="4">
-                                <label for="4"><strong>4</strong></label>
-                                <input type="radio" id="5" name="number5" value="5">
-                                <label for="5"><strong>5</strong></label>
-                                <input type="radio" id="6" name="numbermore" value="More" onclick="addmore()">
-                                <label for="6"><strong id="lab">More</strong></label>
-                            </dd>
+                            <input type="number" name="guestno" class="form-control col-4" min="1" max="30" placeholder="Enter No. og Guests">
                         </div>
+                        <br>
                         <div class="form-row">
                             <label class="col-12 col-sm-3"><strong>Section</strong></label>
-                            <a type="radio" class="btn btn-success btn-sm">No-smoking</a>
-                            <a type="radio" class="btn btn-danger btn-sm">Smoking</a>
+                            <dd class="col-auto">
+                                <input type="radio" id="AC" name="AC">
+                                <label for="AC"><strong>AC</strong></label>
+                                <input type="radio" id="no ac" name="NONAC">
+                                <label for="no ac"><strong>NON AC</strong></label>
+                            </dd>
                         </div>
                         <br>
                         <div class="form-row">

@@ -12,11 +12,11 @@ mongoose.connect("mongodb://localhost:27017/customerdb", {
     console.log("Error" + err.message);
 })
 
-// mongoose.hospitalDB = mongoose.createConnection("mongodb://localhost:27017/hospitalDB", {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex : true
-// });
+mongoose.reservationDB = mongoose.createConnection("mongodb://localhost:27017/reservationDB", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex : true
+});
 
 module.exports = mongoose;
 

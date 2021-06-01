@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 var indexrouter = express.Router();
 
-const Customer = require('../model/customer');
+const Reservation = require('../model/reservation');
 
 /* GET home page. */
 indexrouter.route("/")
@@ -13,8 +13,30 @@ indexrouter.route("/")
   res.render('index');
 })
 .post((req, res) => {
-  const 
-})
-;
+  const guests = req.body.guestno;
+  const AC = req.body.AC;
+  const nonAC = req.body.NONAC;
+  const date = req.body.date;
+  const time = req.body.time;
+
+  const newReservation = new Reservation({
+    guests : guests,
+    AC : AC,
+    nonAC : nonAC,
+    date : date,
+    time: time
+  });
+
+  newReservation.save((err) => {
+    if(err){
+      console.log(err);
+    }else{
+      console.log("Reserved Successfully");
+      res.redirect("/")
+    }
+  });
+
+
+});
 
 module.exports = indexrouter;
