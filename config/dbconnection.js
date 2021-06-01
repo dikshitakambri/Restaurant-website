@@ -18,6 +18,12 @@ mongoose.reservationDB = mongoose.createConnection("mongodb://localhost:27017/re
     useCreateIndex : true
 });
 
+mongoose.feedbackDB = mongoose.createConnection("mongodb://localhost:27017/feedbackDB", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex : true
+});
+
 module.exports = mongoose;
 
 
