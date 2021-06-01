@@ -2,6 +2,8 @@ var express = require('express');
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
 var signinRouter = express.Router();
 
@@ -21,10 +23,11 @@ signinRouter.route("/")
             console.log(err);
         }else {
             if(foundCustomer){
-                if(foundCustomer.password === password){
+                bcrypt.compare(password, saltRounds, (err, result) => {
+                    result == true;
                     console.log("Signed in successfully");
                     res.redirect("/");
-                }
+                });
             }
         }
     });
