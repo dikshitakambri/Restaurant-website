@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
 
 require('../config/dbconnection');
 
@@ -22,8 +23,9 @@ const customerSchema = new mongoose.Schema ({
     }
 }, {
     timestamps: true
-}
-);
+});
+
+customerSchema.plugin(passportLocalMongoose);
 
 const Customer = mongoose.model("Customer", customerSchema);
 

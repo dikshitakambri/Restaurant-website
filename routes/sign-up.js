@@ -2,8 +2,6 @@ var express = require('express');
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
-const saltRounds = 10;
 
 var signupRouter = express.Router();
 
@@ -20,12 +18,11 @@ signupRouter.route("/")
   const email = req.body.email;
   const password = req.body.password
 
-  bcrypt.hash(password, saltRounds, (err, hash) => {
     const newCustomer = new Customer({
       firstname : fname,
       lastname : lname,
       email : email,
-      password: hash
+      password: password
     });
   
     newCustomer.save((err) => {
@@ -37,7 +34,6 @@ signupRouter.route("/")
         res.redirect("/")
       }
     });
-  });
 });
 
 
