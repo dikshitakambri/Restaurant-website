@@ -13,6 +13,7 @@ signupRouter.route("/")
   res.render('sign-up');
 })
 .post((req, res) => {
+
   const fname = req.body.firstname;
   const lname = req.body.lastname;
   const email = req.body.email;

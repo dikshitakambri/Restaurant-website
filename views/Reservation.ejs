@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+
+<div id="ReservationModal" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><strong>Reserve a Table</strong></h4>
+                <a type="button" class="close" style="color: floralwhite;" href="/">&times;</a>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="/">
+                    <div class="form-row">
+                        <label class="col-sm-3 col-12"><strong>Number of Guests</strong></label>
+                        <input type="number" name="guestno" class="form-control col-4" min="1" max="30" placeholder="Enter No. og Guests">
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <label class="col-12 col-sm-3"><strong>Section</strong></label>
+                        <dd class="col-auto">
+                            <input type="radio" id="AC" name="AC">
+                            <label for="AC"><strong>AC</strong></label>
+                            <input type="radio" id="no ac" name="NONAC">
+                            <label for="no ac"><strong>NON AC</strong></label>
+                        </dd>
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <label class="col-12 col-sm-3"><strong>Date and Time</strong></label>
+                        <div class="row">
+                            <div class="col-6 col-sm-6">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date" required>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <input type="time" class="form-control" id="time" name="time" placeholder="Time" required>
+                            </div>
+                       </div>
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <button type="button" class="btn btn-secondary offset-4 offset-sm-3 btn-sm" data-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="submit" onclick="ty()" class="btn btn-primary btn-sm">
+                            Reserve
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
