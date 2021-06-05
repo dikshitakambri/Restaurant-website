@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
+const passport = require("passport");
 
 require('../config/dbconnection');
 
@@ -19,6 +21,10 @@ const customerSchema = new mongoose.Schema ({
     password : {
         type: String,
         required: true
+    },
+    admin : {
+        type : Boolean,
+        default: false
     }
 }, {
     timestamps: true

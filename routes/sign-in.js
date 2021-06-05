@@ -23,11 +23,10 @@ signinRouter.route("/")
             console.log(err);
         }else {
             if(foundCustomer){
-                bcrypt.compare(password, saltRounds, (err, result) => {
-                    result == true;
-                    console.log("Signed in successfully");
+                if (foundCustomer.email === email && foundCustomer.password === password) {
+                    console.log("Signed-in successfully");
                     res.redirect("/");
-                });
+                }
             }
             else{
                 res.render("signin-failure");
