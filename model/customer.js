@@ -5,13 +5,9 @@ const passport = require("passport");
 require('../config/dbconnection');
 
 const customerSchema = new mongoose.Schema ({
-    firstname: {
+    username: {
         type: String,
-        required: true
-    },
-    lastname: {
-        type: String,
-        required: true
+        require: true
     },
     email : {
         type: String,
@@ -30,6 +26,11 @@ const customerSchema = new mongoose.Schema ({
     timestamps: true
 });
 
+customerSchema.plugin(passportLocalMongoose);
+
 const Customer = mongoose.model("Customer", customerSchema);
+
+passport.serializeUser(Customer.serializeUser());
+passport.deserializeUser(Customer.deserializeUser());
 
 module.exports = Customer;

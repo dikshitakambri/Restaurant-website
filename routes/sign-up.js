@@ -9,6 +9,9 @@ var signupRouter = express.Router();
 
 signupRouter.use(bodyParser.json());
 
+const LocalStrategy = require('passport-local').Strategy;
+passport.use(new LocalStrategy(Customer.authenticate()));
+
 /* GET Sign-up page. */
 signupRouter.route("/")
 .get((req, res) => {
@@ -16,30 +19,22 @@ signupRouter.route("/")
 })
 .post((req, res, next) => {
 
-  Customer.findOne({email: req.body.email})
-  .then((customer) => {
-    if(customer != null) {
-      var err = new Error('User ' + req.body.email + ' already exists!');
-      err.status = 403;
+  Customers = new Customer({
+    username : req.body.fullname,
+    email: req.body.email,
+    password : req.body.password
+  });
+
+  Customer.register(Customers, req.body.password, (err, customer) => {
+    if(err){
+      console.log(err);
       res.redirect("/signup");
     }
     else {
-      return Customer.create({
-        email: req.body.email,
-        password: req.body.password,
-        firstname : req.body.firstname,
-        lastname : req.body.lastname
-      });
-    }
-  })
-  .then((customer) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    passport.authenticate("local")(req, res, () => {
+      console.log("Your account has been saved");
       res.redirect("/");
-    });
-  }, (err) => next(err))
-  .catch((err) => next(err));
+    }
+  });    
 });
 
 

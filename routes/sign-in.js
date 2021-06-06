@@ -2,8 +2,7 @@ var express = require('express');
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
-const saltRounds = 10;
+const passport = require("passport");
 
 var signinRouter = express.Router();
 
@@ -14,25 +13,9 @@ signinRouter.route("/")
 .get((req, res) => {
   res.render('sign-in');
 })
-.post((req, res) =>{
-    const email = req.body.email;
-    const password = req.body.password;
-
-    Customer.findOne({email: email}, (err, foundCustomer) => {
-        if(err){
-            console.log(err);
-        }else {
-            if(foundCustomer){
-                if (foundCustomer.email === email && foundCustomer.password === password) {
-                    console.log("Signed-in successfully");
-                    res.redirect("/");
-                }
-            }
-            else{
-                res.render("signin-failure");
-            }
-        }
-    });
+.post(passport.authenticate("local"),(req, res) => {
+    console.log("logged-in Successfully");
+    res.redirect("/");
 });
   
 
